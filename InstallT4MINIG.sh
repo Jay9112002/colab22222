@@ -145,7 +145,7 @@ miner_eth(){
           k_wallet=${k_wallet:-'0x83262fd642190cdd04dae96005e26330d9bxxxx'}
   read -p "algo [ETHASH]:" k_algo
           k_algo=${k_algo:-'ETHASH'}
-  walletstart="./1.42/lolMiner --algo $_algo --pool $k_pool --user $k_wallet.$k_user-$number_mining"
+  walletstart="./1.42/lolMiner --algo $k_algo --pool $k_pool --user $k_wallet.$k_user-$number_mining"
   $walletstart
 }
 
